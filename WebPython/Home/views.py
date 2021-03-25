@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.https import HttpRespone
+from django.http import HttpRespone
 # Create your views here.
 def index(request):
     respone = HttpRespone()
