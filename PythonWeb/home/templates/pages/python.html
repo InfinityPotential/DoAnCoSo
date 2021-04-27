@@ -1,0 +1,67 @@
+{% extends "pages/base.html" %}
+
+{% block title %}
+Python
+{% endblock %}
+
+{% block content %}
+<h1>1 Cài đặt Python</h1>
+<h2>1.1 Quá trình thông dịch chương trình</h2>
+<p>Python là ngôn ngữ thông dịch (interpret), xem quá trình thông dịch lệnh của python. Trình thông dịch của python được viết bằng C (gọi là CPython), trong hình dưới là Interpreter.</p>
+<img src="https://1.bp.blogspot.com/-HZVMTBApwPM/YFFca3zSd7I/AAAAAAAAFOo/LYPRazCi23o7jqe5kvh8T3RSVVPuNPmgACLcBGAsYHQ/s802/1.jpg">
+<br>Các bước tạo ra một chương trình:
+<ul>
+    <li>Viết mã bằng một trình soạn mã nguồn bất kỳ (text editor), ví dụ VS Code, tạo ra tập tin mã nguồn (source file)</li>
+    <li>Thực hiện thông dịch và chạy chương trình bằng trình thông dịch (interpreter)</li>
+    <li>Trình thông dịch sẽ chuyển mã chương trình sang dạng byte code (mã trung gian), máy ảo sẽ thực thi mã trung gian để đưa ra kết quả.</li>
+    <li>Máy ảo trong Python được gọi là PVM (python virtual machine). Dùng máy ảo có tác dụng giúp chương trình chạy được trên mọi phần cứng, mọi họ CPU khác nhau.</li>
+  </ul>
+
+<p>Vậy cài đặt Python chính là cài đặt trình thông dịch (Interpreter), trong đó có bộ biên dịch lệnh (Compiler) chuyển từ mã nguồn sang dạng byte code, các thư viện, các tiện ích đi kèm và máy ảo Python (để thực thi mã chương trình ở dạng byte code và cho ra kết quả).</p>
+
+<h2>1.2 Tải và cài đặt Python</h2>
+
+<p>Vào trang <a href="https://www.python.org/"></a>, chọn tab Downloads, chọn phiên bản phù hợp với hệ điều hành. Ví dụ chọn bản 3.9.2. Đây là bộ cài đặt tự động (Installer) nên chỉ việc nhấp đúp chuột vào tập tin tải về để thực hiện việc cài đặt.</p>
+<br>Vị trí cài đặt mặc định của python: 
+<ul style="list-style-type:none;">
+    <li>C:\Program Files\Python39. Sử dụng thông tin này để cài đặt biến môi trường.</li>
+    <li>Sau khi cài đặt xong, để kiểm tra xem việc cài đặt Python đã được chưa. Sử dụng cửa sổ dòng lệnh của Python (Shell) hoặc IDLE để kiểm tra.</li>
+    <li>Python cho phép nhập lệnh trực tiếp vào cửa sổ dòng lệnh của nó > thực thi và xuất kết quả.</li>
+</ul>
+
+Ví dụ:
+<ul>
+    <li>Chạy lệnh bằng chương trình Shell: vào menu Start của hệ điều hành > trong danh sách các chương trình > chọn Python 3.9 (64-bit) để mở chương trình Shell của Python.</li>
+    <li>Tại cửa sổ Shell > gõ lệnh 4 + 5, nhấn phím Enter để xem kết quả.</li>
+</ul>
+
+<p>Bạn cũng có thể nhập lệnh trực tiếp vào IDLE với các bước làm tương tự như chạy bằng Shell, chỉ khác là thay vì chạy chương trình Shell thì chạy chương trình IDLE (Python 3.9 64-bit).</p>
+
+<br>Nếu đã cài đặt biến môi trường rồi, thì chỉ cần vào cửa sổ dòng lệnh, gõ lệnh python --version, hoặc gõ tắt là py --version nếu hiển thị được phiên bản của python là việc cài đặt đã được.
+<img src="../../../static/images/Python 3.9.PNG">
+<ul>
+    <li>Tuy nhiên, đó mới chỉ là được dẫn của shortcut thôi. Chuột phải vào Python 3.9 (64-bit) > chọn tiếp Open file location > sẽ thấy được vị trí của tập tin Python.exe</li>
+    <img src="../../../static/images/python.exe.PNG">
+    <li>Bấm chuột vào được dẫn phía trên > copy > sẽ được đường dẫn đầy đủ là: C:\Program Files\Python39</li>
+    <li>Vậy là đã có đường dẫn để đem qua cấu hình cho biến môi trường</li>
+</ul>
+<h3>Thiết lập biến môi trường</h3>
+<ul>
+    <li>Gõ phím cửa sổ trên bàn phím > nhập vào từ khóa “edit the system environment variables” > sẽ thấy xuất hiện tab có chức năng “edit the system environment variables” > chạy chương trình này sẽ ra cửa sổ System Properties</li>
+    <img src="../../../static/images/Edit the system environment variables.PNG">
+    <li>Chọn mục Environment Variables</li>
+    <img src="../../../static/images/Environment Variables.PNG">
+    <li>Trong khung System variables > chọn hàng Path > chọn mục Edit</li>
+    <img src="../../../static/images/Path.PNG">
+    <li>Bấm vào mục New > dán đường dẫn của Python.exe (C:\Program Files\Python39) vào > bấm OK để hoàn thành.</li>
+    <li>Mở cửa sổ dòng lệnh của Windows > gõ python --version > nếu chạy được lệnh này là việc thiết lập biến môi trường đã hoàn thiện</li>
+    <img src="../../../static/images/Python version.PNG">
+</ul>
+<h2>1.3 IDLE là gì?</h2>
+<p>IDLE là viết tắt của Intergrated Development and Learning Environment, là một IDE (môi trường phát triển phần mềm) mặc định của python. IDLE được cài đặt mặc định khi cài đặt Python. Tuy nhiên, IDLE không được sử dụng nhiều do có một số hạn chế.
+
+<br>Một số IDE phổ biến được sử dụng để phát triển phần mềm bằng Python như: PyCharm (có phí), PyDev (mã nguồn mở), Atom IDE (mã nguồn mở), Wing (miễn phí), PyScripter (miễn phí).
+
+<br>Ngoài các IDE, có thể sử dụng các text editor để lập trình với Python như VS code (miễn phí), Sublime text (miễn phí).
+</p>
+{% endblock %}

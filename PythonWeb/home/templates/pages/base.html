@@ -13,19 +13,67 @@
    </title>
 </head>
 <body>
-   <div class="container-fluid">
-      <div class="row">
-          <div class="col-sm-2">
-              <img src="{% static 'images/S.jpg' %}" class="responsive-img" style="max-height:150px"/>
-          </div>
-          <div class="col-sm-10">
-              <h1>Blog Làm từ Python Django</h1>
-          </div>
-      </div>
-  </div>
-   Nội dung
+   <!--Main Navigation-->
+<header>
+
+   <!-- Navbar -->
+   <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+     <div class="container">
+
+       <!-- Collapse -->
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+
+       <!-- Links -->
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+         <!-- Left -->
+         <ul class="navbar-nav mr-auto">
+           <li class="nav-item active">
+             <a class="nav-link waves-effect" href="#">Home
+               <span class="sr-only">(current)</span>
+             </a>
+           </li>
+         </ul>
+       </div>
+
+     </div>
+   </nav>
+   <!-- Navbar -->
+
+ </header>
+ <!--Main Navigation-->
    {% block content %}
   
    {% endblock %}
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      © 2021 Copyright: Đinh Bá Thái Sơn, Infinity Potential
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Initializations -->
+  <script type="text/javascript">
+    // Animations initialization
+    new WOW().init();
+
+  </script>
 </body>
 </html>
