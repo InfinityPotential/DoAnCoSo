@@ -2,5 +2,5 @@
 {% block title %}Blog{% endblock %}
 {% block content %}
 {% for post in Posts %}
-<h4>{{post.date|date:"d-m-Y"}}<a href="http://127.0.0.1:8000/admin/blog/post/">{{post.title}}</a></h4>{% endfor %}
+<br><br><h4>{{post.date|date:"d-m-Y"}}<a href="{%url 'post' post.id %}">{{post.title}}</a></h4>{% endfor %}
 {% endblock %}

@@ -32,17 +32,12 @@
          <!-- Left -->
          <ul class="navbar-nav mr-auto">
            <li class="nav-item active">
-             <a class="nav-link waves-effect" href="">Home
+             <a class="nav-link waves-effect" href="{% url 'home' %}">Home
                <span class="sr-only"></span>
              </a>
            </li>
            <li class="nav-item active">
-            <a class="nav-link waves-effect" href="blog/1">Python
-              <span class="sr-only"></span>
-            </a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link waves-effect" href="blog/2">Django
+            <a class="nav-link waves-effect" href="{% url 'blog' %}">Bài viết
               <span class="sr-only"></span>
             </a>
           </li>
