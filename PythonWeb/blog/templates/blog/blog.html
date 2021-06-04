@@ -4,5 +4,6 @@
 {% for post in Posts %}
 <br><br><h4><a href="{%url 'post' post.id %}">{{post.title}}</a></h4>
 {{post.date|date:"d-m-Y"}}
+{{post.body|safe|linebreaks}}
 {% endfor %}
 {% endblock %}
