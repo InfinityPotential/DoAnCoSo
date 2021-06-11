@@ -41,6 +41,19 @@
               <span class="sr-only"></span>
             </a>
           </li>
+          <li class="nav-item active">
+            {% if user.username %}
+                    <p>Xin chào {{user.username}}</p>
+                    <p><a class="nav-link waves-effect" href="{% url 'logout' %}">Đăng xuất
+                      <span class="sr-only"></span>
+                    </a></p>
+                {% else %}
+                    <p><a class="nav-link waves-effect" href="{% url 'register' %}">Đăng ký</a>
+                      <a class="nav-link waves-effect" href="{% url 'login' %}">Đăng nhập</a></p>
+                {% endif %}
+              <span class="sr-only"></span>
+            </a>
+          </li>
          </ul>
        </div>
 
